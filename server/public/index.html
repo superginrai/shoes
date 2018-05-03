@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
     <title>SHOESSS</title>
 </head>
-<body>
+
+<body ng-app="ShoeApp" ng-controller="ShoeController as vm">
     <h1>SHOOOES</h1>
+    <button ng-click="vm.listShoes()">BRING ME SHOES</button>
+    <input type="text" name="New SHOE for YOU!" ng-model="vm.newShoe.name" placeholder="New SHu 4 U!!" />
+    <input type="text" name="$$$$" ng-model="vm.newShoe.cost" placeholder="new shus co$t??" />
+    <button ng-click="vm.createShoe()">adda shuuu</button>
+    <table>
+        <thead>
+            <tr>
+                <th>NAmE of shuu</th>
+                <th>$$ of shuu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="shoe in vm.shoes.data">
+                <td>
+                    <input ng-model="shoe.name">
+                </td>
+                <td>
+                    <input ng-model="shoe.cost">
+                </td>
+                <td>
+                    <button ng-click="vm.updateShoe(shoe)">changezz yur shuuu!</button>
+                </td>
+                <td>
+                    <button ng-click="vm.deleteShoe(shoe)">Baleted shuuu</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
