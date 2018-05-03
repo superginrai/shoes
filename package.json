@@ -1,0 +1,24 @@
+{
+  "name": "shoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superginrai/shoes.git"
+  },
+  "author": "Cory Booth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/superginrai/shoes/issues"
+  },
+  "homepage": "https://github.com/superginrai/shoes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  }
+}
